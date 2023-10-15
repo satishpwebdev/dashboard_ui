@@ -45,7 +45,7 @@ const Sidebar = ({ children }) => {
         >
           <div className="flex items-center px-2 gap-4 ">
             <div className="py-1 my-2">{<item.icon fontSize="25"></item.icon>}</div>
-            <h1 className="text-md">{item.label}</h1>
+            <h1 className="text-md md:block hidden">{item.label}</h1>
           </div>
           <IoIosArrowForward></IoIosArrowForward>
         </Link>
@@ -55,10 +55,10 @@ const Sidebar = ({ children }) => {
 
   return (
     <>
-      <div className={`flex overflow-hidden flex-col p-3 ${isOpen ? "w-24" : "w-56"} bg-[#0d1544]  text-white`}>
+      <div className={`flex overflow-hidden flex-col p-3 ${!isOpen ? "w-20" : "w-56"} md:w-56 w:16S bg-[#0d1544]  text-white`}>
         <div className="flex items-center gap-2 py-2 px-3 my-2">
           {<TbHexagonLetterO fontSize={24} />}
-          <span className="text-xl font-semibold">Dashboard</span>
+          <span className="text-xl font-semibold md:block hidden">Dashboard</span>
         </div>
         <div className="flex-1">
           {menuItems.map((item) => (

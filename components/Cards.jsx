@@ -6,7 +6,7 @@ import { BsArrowDownShort, BsArrowUpShort } from "react-icons/bs";
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
       <div className="bg-white p-2 flex items-center justify-between w-full gap-2 rounded-lg py-4">
         <div className="bg-green-100 w-24 h-24 rounded-full flex items-center justify-center">
           <AiOutlineDollarCircle fontSize={50} className=" text-green-500" />
