@@ -4,7 +4,8 @@ import Layout from "@/components/Layout";
 const inter = Inter({ subsets: ["latin"] });
 import Topbar from "@/components/Topbar";
 import Cards from "@/components/Cards";
-import Graphs from "@/components/Graphs";
+import Charts from "@/components/Charts";
+import Products from "@/components/Products";
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       <Layout>
         <Topbar></Topbar>
         <Cards></Cards>
-        <Graphs></Graphs>
+        <Charts></Charts>
+        <Products></Products>
+
       </Layout>
     </>
   );
