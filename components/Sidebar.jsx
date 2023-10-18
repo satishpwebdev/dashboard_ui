@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { TbHexagonLetterO, TbBox } from "react-icons/tb";
-import { PiLockKeyBold } from "react-icons/pi";
+import { PiLockKeyBold,PiStudent } from "react-icons/pi";
 import { LuUserSquare2 } from "react-icons/lu";
 import { MdOutlinePayments, MdLiveHelp } from "react-icons/md";
 import { CiDiscount1 } from "react-icons/ci";
-import { IoIosArrowForward ,IoIosArrowDown} from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -39,28 +39,33 @@ const Sidebar = ({ children }) => {
         <Link
           href={item.link}
           key={item.id}
-          className={`flex my-2 items-center px-2 rounded-md gap-2 justify-between hover:bg-[#262e5a] ${
-            isActive ? "bg-[#262e5a]" : ""
+          className={`flex my-2 items-center  hover:text-black hover:rounded-l-full hover:rounded-r-0 hover:border-r-0 gap-2 justify-between hover:bg-gray-100 ${
+            isActive ? "bg-[#]" : ""
           }`}
         >
           <div className="flex items-center px-2 gap-4 ">
             <div className="py-1 my-2">{<item.icon fontSize="25"></item.icon>}</div>
             <h1 className="text-md md:block hidden">{item.label}</h1>
           </div>
-          <IoIosArrowForward></IoIosArrowForward>
         </Link>
+
+       
       </>
     );
   };
 
   return (
     <>
-      <div className={`flex overflow-hidden flex-col p-3 ${!isOpen ? "w-20" : "w-56"} md:w-56 w:16S bg-[#0d1544]  text-white`}>
+      <div
+        className={`flex overflow-hidden flex-col ml-2 ${
+          !isOpen ? "w-20" : "w-56"
+        } md:w-56 w:16 bg-[#3284ee]  text-white`}
+      >
         <div className="flex items-center gap-2 py-2 px-3 my-2">
-          {<TbHexagonLetterO fontSize={24} />}
-          <span className="text-xl font-semibold md:block hidden">Dashboard</span>
+          {<PiStudent fontSize={44} />}
+          <span className="text-xl font-semibold md:block hidden">easycampus</span>
         </div>
-        <div className="flex-1">
+        <div className="flex-">
           {menuItems.map((item) => (
             <LinksTag key={item.id} item={item}></LinksTag>
           ))}
@@ -70,12 +75,12 @@ const Sidebar = ({ children }) => {
             <div className="w-12 h-12 flex items-center gap-3  ">
               <img className="w-8 h-8  rounded-full" src="https://i.pravatar.cc/250"></img>
               <div className="flex flex-col items-start  w-full ">
-                <h2 className="text-sm font-semibold">Satish</h2>
+                <h2 className="text-sm font-semibold">Manish</h2>
                 <h4 className="text-xs overflow-hidden whitespace-nowrap ">Frontend Developer</h4>
               </div>
             </div>
             <div>
-              <IoIosArrowDown ></IoIosArrowDown>
+              <IoIosArrowDown></IoIosArrowDown>
             </div>
           </div>
         </div>

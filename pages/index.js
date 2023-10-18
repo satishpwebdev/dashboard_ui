@@ -6,6 +6,7 @@ import Topbar from "@/components/Topbar";
 import Cards from "@/components/Cards";
 import Charts from "@/components/Charts";
 import Products from "@/components/Products";
+import UserTable from "@/components/UserTable";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
         <Topbar></Topbar>
         <Cards></Cards>
         <Charts></Charts>
+        <UserTable></UserTable>
         <Products></Products>
-
       </Layout>
     </>
   );
